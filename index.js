@@ -26,7 +26,7 @@ for (const commandFile of commandFiles) {
 client.once('ready', () => {
   console.log('MH Weakener is online!');
 
-  const guildId = '1046313221751050241';
+  const guildId = process.env.DISCORD_TOKEN;
   const guild = client.guilds.cache.get(guildId);
   let commands;
 
