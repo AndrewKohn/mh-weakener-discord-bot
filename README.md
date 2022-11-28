@@ -38,7 +38,7 @@ app[worker.1]: MH Weakener is online!
 
 ## To-do
 
-- [ ] Adjust receiving user input to ignore " ' " & " - " characters (or replace with a space).
 - [x] Have Resistances label elements in column rather than row.
 - [ ] Assign a monster icon to the thumbnail of embeds
 - [ ] Format stars so they all start at the same position down the column.
+- [x] Add \* to element if it contains a condition. Display condition in a new addField at the bottom of the embed.
