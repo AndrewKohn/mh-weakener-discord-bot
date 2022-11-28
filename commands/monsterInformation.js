@@ -89,8 +89,6 @@ module.exports = {
           });
         }
 
-        console.log(conditionOutput);
-
         await message.channel.send({ embeds: [moduleEmbed] });
       }
     }

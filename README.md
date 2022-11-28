@@ -2,6 +2,10 @@
 
 <div align="center"><h3>Andrew Kohn</h3></div>
 
+![App example image](./assets/bot_example.png)
+
+#
+
 This is a discord bot that quickly displays a monster's location, resistances, and elemental/status weaknesses for all hunters in the channel. It allows everyone in the party to easily view an upcoming monster's stats without fiddling with google and wikia sites.
 
 Note: This is only for Monster Hunter World & MHW: Iceborne. Monsters also available in other games may have undergone stat changes that may not match this bot's data.
