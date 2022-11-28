@@ -3,7 +3,7 @@ const monsters = require('../monsters.json');
 
 module.exports = {
   name: 'm',
-  description: 'This is a ping command',
+  description: 'Displays a monsters locations, resistances, and weaknesses.',
   execute: async (message, args) => {
     if (args.length === 0) return;
 
