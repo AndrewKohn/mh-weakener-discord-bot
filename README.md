@@ -1,12 +1,10 @@
-# Monster Hunter Weakener Discord Bot
+<div align="center"><h1>Monster Hunter Weakener Discord Bot</h1></div>
 
-### Andrew Kohn
+<div align="center"><h3>Andrew Kohn</h3></div>
 
 This is a discord bot that quickly displays a monster's location, resistances, and elemental/status weaknesses for all hunters in the channel. It allows everyone in the party to easily view an upcoming monster's stats without fiddling with google and wikia sites.
 
 Note: This is only for Monster Hunter World & MHW: Iceborne. Monsters also available in other games may have undergone stat changes that may not match this bot's data.
-
-#
 
 ## Running
 
@@ -32,15 +30,11 @@ heroku[worker.1]: State changed from starting to up
 app[worker.1]: MH Weakener is online!
 ```
 
-#
-
 ## Commands
 
 - /help : Displays commands in discord. Will only show to user.
 - /monsters : Displays all available and accepted monster names.
 - !m {monsterName} : Displays selected monster stats. Will show to channel.
-
-#
 
 ## To-do
 
