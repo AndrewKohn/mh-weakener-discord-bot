@@ -22,7 +22,7 @@ module.exports = {
 
         if (monster.resistances.length !== 0) {
           for (const monsterResistance of monster.resistances) {
-            resistanceOutput += `${monsterResistance.element} `;
+            resistanceOutput += `${monsterResistance.element}\n`;
           }
         } else resistanceOutput = 'No resistances';
 
