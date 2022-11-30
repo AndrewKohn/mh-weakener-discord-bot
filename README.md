@@ -2,7 +2,7 @@
 
 <div align="center"><h3>Andrew Kohn</h3></div>
 
-![App example image](./assets/bot_example.png)
+<div align="center"><img src="./assets/bot_example.png" /></div>
 
 #
 
