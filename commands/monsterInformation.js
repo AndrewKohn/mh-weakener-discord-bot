@@ -1,3 +1,5 @@
+'use strict';
+
 const { EmbedBuilder } = require('@discordjs/builders');
 const monsters = require('../monsters.json');
 
@@ -6,6 +8,10 @@ module.exports = {
   description: 'Displays a monsters locations, resistances, and weaknesses.',
   execute: async (message, args) => {
     if (args.length === 0) return;
+
+    const capitalizeFirstLetter = string => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    };
 
     for (const monster of monsters) {
       const argsString = args.join(' ').toLowerCase();
@@ -27,9 +33,13 @@ module.exports = {
           for (const monsterResistance of monster.resistances) {
             if (monsterResistance.condition !== null) {
               conditionOutput = monsterResistance.condition;
-              resistanceOutput += `${monsterResistance.element}\*\n`;
+              resistanceOutput += `${capitalizeFirstLetter(
+                monsterResistance.element
+              )}\*\n`;
             } else {
-              resistanceOutput += `${monsterResistance.element}\n`;
+              resistanceOutput += `${capitalizeFirstLetter(
+                monsterResistance.element
+              )}\n`;
             }
           }
         } else resistanceOutput = 'No resistances';
@@ -45,24 +55,37 @@ module.exports = {
             conditionOutput = monsterWeakness.condition;
           }
 
-          for (let i = 0; i < monsterWeakness.stars; i++) stars += ' ⭐';
+          for (let i = 0; i < monsterWeakness.stars; i++) stars += '⭐';
 
           if (monsterWeakness.stars === 3) {
             if (monsterWeakness.condition !== null) {
               conditionOutput = monsterWeakness.condition;
               weaknessOutput +=
-                `**__${monsterWeakness.element}__**\*    ` + stars + '\n';
+                `**__${capitalizeFirstLetter(
+                  monsterWeakness.element
+                )}__**\*\u{2003}` +
+                stars +
+                '\n';
             } else {
               weaknessOutput +=
-                `**__${monsterWeakness.element}__**    ` + stars + '\n';
+                `**__${capitalizeFirstLetter(
+                  monsterWeakness.element
+                )}__**\u{2003}` +
+                stars +
+                '\n';
             }
           } else {
             if (monsterWeakness.condition !== null) {
               conditionOutput = monsterWeakness.condition;
               weaknessOutput +=
-                `${monsterWeakness.element}\*    ` + stars + '\n';
+                `${capitalizeFirstLetter(monsterWeakness.element)}\*\u{2003}` +
+                stars +
+                '\n';
             } else {
-              weaknessOutput += `${monsterWeakness.element}    ` + stars + '\n';
+              weaknessOutput +=
+                `${capitalizeFirstLetter(monsterWeakness.element)}\u{2003}` +
+                stars +
+                '\n';
             }
           }
         }
