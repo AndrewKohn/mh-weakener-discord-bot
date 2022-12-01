@@ -1,3 +1,5 @@
+'use strict';
+
 const { EmbedBuilder } = require('@discordjs/builders');
 
 module.exports = {

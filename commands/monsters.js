@@ -1,3 +1,5 @@
+'use strict';
+
 const { EmbedBuilder } = require('@discordjs/builders');
 const monsters = require('../monsters.json');
 
