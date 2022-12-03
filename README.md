@@ -18,21 +18,8 @@ Then, create a bot on Discord with the send messages permission.
 
 <p>To run the bot, run <code>node index.js</code></p>
 
-To deploy the bot:
-
-- Sign-up/sign-in to heroku and upload repo via github.
-- On the Settings tab, go to Config Vars and Reveal Config Vars. Add .env constants to each respective line.
-- Underneath Config Vars, add the Node.js Buildpack.
-- On the Deploy tab, enable automatic deploys and go to Manual Deploy and manually deploy branch. Check to see if deployment contains all checkmarks.
-- On the Resources tab, edit the web line and disable it. Edit the worker line and enable it.
-- On the top-right section of the heroku page, select the More dropdown and click the View Logs. Let the log complete before using bot.
-
-You're bot is up and running if the status below matches with your log. If not, then an error on the log will help direct what went wrong.
-
-```
-heroku[worker.1]: State changed from starting to up
-app[worker.1]: MH Weakener is online!
-```
+Note on deploying:
+- heroku introduced a very limiting free-tier for users that allows use for about one week until you add a payment plan, use railway.app instead...
 
 ## Commands
 
