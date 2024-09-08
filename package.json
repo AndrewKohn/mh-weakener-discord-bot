@@ -4,7 +4,7 @@
   "description": "Discord bot to display monster weaknesses from Monster Hunter World: Iceborne",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "author": "Grandy#5542",
   "license": "ISC",
